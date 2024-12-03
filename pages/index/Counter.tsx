@@ -7,7 +7,7 @@ export function Counter() {
     <button
       type="button"
       className="inline-block border border-black rounded bg-red-800 text-avocado-400 cursor-pointer hover:brightness-110 active:brightness-125 px-2 py-1 text-xs font-medium uppercase leading-normal"
-      onClick={() => setCount((count) => count + 1)}
+      onClick={() => setCount((count) => count + 2)}
     >
       Counter {count}
     </button>
