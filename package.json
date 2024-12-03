@@ -6,7 +6,8 @@
         "lint": "eslint .",
         "prisma:studio": "prisma studio",
         "prisma:generate": "prisma generate",
-        "shadcn": "bunx shadcn@latest"
+        "shadcn": "bunx shadcn@latest",
+        "update:packages": "bun update --latest && bun add tailwindcss@next @tailwindcss/vite@next"
     },
     "dependencies": {
         "@auth/core": "^0.37.4",
