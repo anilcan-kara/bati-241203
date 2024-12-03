@@ -1,11 +1,13 @@
-import vercel from "vite-plugin-vercel";
-import react from "@vitejs/plugin-react";
 import devServer from "@hono/vite-dev-server";
-import { defineConfig } from "vite";
+import tailwindcss from "@tailwindcss/vite";
+import react from "@vitejs/plugin-react";
 import vike from "vike/plugin";
+import { defineConfig } from "vite";
+import vercel from "vite-plugin-vercel";
 
 export default defineConfig({
   plugins: [
+    tailwindcss(),
     vike({
       prerender: true,
     }),
