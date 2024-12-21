@@ -4,6 +4,10 @@ import type { Session } from "@auth/core/types";
 // TODO: stop using universal-middleware and directly integrate server middlewares instead. (Bati generates boilerplates that use universal-middleware https://github.com/magne4000/universal-middleware to make Bati's internal logic easier. This is temporary and will be removed soon.)
 import type { Get, UniversalHandler, UniversalMiddleware } from "@universal-middleware/core";
 
+console.log("process", process);
+
+console.log("process.env", process.env);
+
 const env: Record<string, string | undefined> =
   typeof process?.env !== "undefined"
     ? process.env
@@ -26,7 +30,7 @@ const authjsConfig = {
   basePath: "/api/auth",
   trustHost: Boolean(env.AUTH_TRUST_HOST ?? env.VERCEL ?? env.NODE_ENV !== "production"),
   // TODO: Replace secret {@see https://authjs.dev/reference/core#secret}
-  secret: "MY_SECRET",
+  secret: import.meta.env.AUTH_SECRET,
   providers: [
     // TODO: Choose and implement providers
     CredentialsProvider({

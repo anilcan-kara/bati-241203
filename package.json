@@ -15,7 +15,7 @@
         "@prisma/client": "^6.0.1",
         "@radix-ui/react-icons": "^1.3.2",
         "@tailwindcss/oxide-linux-x64-gnu": "^0.0.0-insiders.8fb9ae8f",
-        "@tailwindcss/vite": "^4.0.0-beta.6",
+        "@tailwindcss/vite": "^4.0.0-beta.8",
         "@trpc/client": "^10.45.2",
         "@trpc/server": "^10.45.2",
         "@universal-middleware/core": "^0.3.1",
